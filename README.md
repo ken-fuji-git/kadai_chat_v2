@@ -5,7 +5,7 @@ PIXEL SYNC
 ピクセルお絵かきのリアルタイム共有ページ
 
 ## ③アプリのデプロイURL
-https://ken-fuji-git.github.io/kadai_chat_v1/
+https://ken-fuji-git.github.io/kadai_chat_v2/
 
 ## ⑤工夫した点・こだわった点
 当初は画像のやりとりができるように考えていたものの、かなりハードルが高いことがわかり、ピクセルお絵かきの方にシフトしました。
