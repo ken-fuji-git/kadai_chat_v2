@@ -1,0 +1,121 @@
+/* ====== 全体レイアウト（シンプル） ====== */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    margin: 20px;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 24px;
+    align-items: start;
+    max-width: 800px;
+}
+
+/* ====== タイトル ====== */
+.title {
+    font-weight: 800;
+    font-size: 28px;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* ====== 左側パネル ====== */
+.panel {
+    border: 1px solid #ddd;
+    padding: 14px;
+}
+
+.section {
+    margin-bottom: 16px;
+}
+
+.label {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+/* ====== カラーピッカー ====== */
+.palette {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.color-chip {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.color-chip.selected {
+    border: 5px solid #ff00ff;
+}
+
+/* ====== 描画グリッド（8x8） ====== */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2px;
+    width: min(360px, 90vw);
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    /* 正方形固定 */
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* ====== ボタン ====== */
+.btns {
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    padding: 8px 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+/* ====== 右側：保存領域（1件） ====== */
+.save-panel {
+    border: 1px solid #ddd;
+    padding: 14px;
+}
+
+#savePreview {
+    border: 1px dashed #bbb;
+    padding: 8px;
+    min-height: 100px;
+}
+
+/* 縮小表示の8x8 */
+.mini-grid {
+    display: grid;
+    /* ここで横8マスと決定 */
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0px;
+    width: 100px;
+}
+
+.mini-cell {
+    aspect-ratio: 1 / 1;
+    border: 0px solid #eee;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.hint {
+    font-size: 11px;
+    color: #666;
+    margin-top: 8px;
+    line-height: 1.4;
+}

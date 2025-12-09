@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>>PIXEL SYNC</title>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- ===== 左側：操作領域 ===== -->
+        <div>
+            <div class="title">PIXEL SYNC</div>
+
+            <div class="panel">
+                <!-- カラーピッカー -->
+                <div class="section">
+                    <div class="label">COLOR</div>
+                    <div id="palette" class="palette"></div>
+                </div>
+
+                <!-- 描画領域 -->
+                <div class="section">
+                    <div class="label">CANVAS (8 x 8)</div>
+                    <div id="grid"></div>
+                </div>
+
+                <!-- 操作ボタン -->
+                <div class="section">
+                    <div class="btns">
+                        <button id="allClear">ALL CLEAR</button>
+                        <button id="saveBtn">SAVE ▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 右側：保存領域（1件） ===== -->
+        <div class="save-panel">
+            <div class="label">保存エリア</div>
+            <div id="savePreview"></div>
+            <div class="hint">
+                ・SAVE ▶ で現状を保存（localStorage）<br>
+                ・この領域をクリックすると保存内容で塗り替え<br>
+                ・塗り替えはFirebaseにも反映されます
+            </div>
+        </div>
+    </div>
+
+    <footer><small>PIXCEL SYNC</small></footer>
+
+    <!-- main.js（type=moduleで読み込む） -->
+    <script type="module" src="./js/main.js"></script>
+
+</body>
+
+</html>
